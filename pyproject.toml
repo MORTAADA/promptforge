@@ -1,0 +1,48 @@
+[build-system]
+requires = ["hatchling>=1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "promptforge"
+version = "0.1.0"
+description = "A programming language and compiler for AI prompts."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.12"
+
+authors = [
+    { name = "Your Name" }
+]
+
+keywords = [
+    "compiler",
+    "dsl",
+    "prompt",
+    "llm",
+    "ai",
+    "prompt-engineering"
+]
+
+dependencies = []
+
+[project.optional-dependencies]
+
+dev = [
+    "pytest>=8",
+    "pytest-cov",
+    "black",
+    "ruff",
+    "mypy",
+]
+
+[tool.black]
+line-length = 88
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests"
+]
